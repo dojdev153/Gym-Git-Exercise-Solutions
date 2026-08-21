@@ -73,3 +73,46 @@ git status
 git add service.html
 git commit -m "merge: resolve service page conflict"
 git push origin ft/service-redesign
+
+//BUNDLE 3
+exercise 1
+git switch main
+git pull origin main
+git switch -c ft/team-page
+git add team.html
+git commit -m "feat: add team page"
+git push -u origin ft/team-page
+git switch main
+git pull origin main
+git switch -c ft/contact-page
+git switch ft/team-page
+git log --oneline
+git switch ft/contact-page
+git cherry-pick <TEAM_COMMIT_HASH>
+git add contact.html
+git commit -m "feat: add contact page"
+git push -u origin ft/contact-page
+git switch -c ft/faq-page
+git add faq.html
+git commit -m "feat: add faq page"
+git push -u origin ft/faq-page
+git revert <TEAM_COMMIT_HASH>
+git push
+
+exercise 2
+git switch ft/faq-page
+git switch -c ft/home-page-redesign
+git branch
+git switch main
+git add .
+git commit -m "feat: update main branch"
+git push origin main
+git switch ft/home-page-redesign
+git rebase main
+git status
+git add .
+git rebase --continue
+git rebase --abort
+git add home.html
+git commit -m "feat: redesign home page"
+git push -u origin ft/home-page-redesign
