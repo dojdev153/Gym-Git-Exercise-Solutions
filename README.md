@@ -116,3 +116,48 @@ git rebase --abort
 git add home.html
 git commit -m "feat: redesign home page"
 git push -u origin ft/home-page-redesign
+
+//BUNDLE 4
+exercise 1
+git switch main
+git branch
+git pull origin main
+git remote add git-copy https://github.com/dojdev153/git-exercise-copy.git
+git remote -v
+git add home.html
+git commit -m "feat: update home page"
+git push origin main
+git push -u git-copy main
+git branch -r
+
+exercise 2
+git switch main
+git pull origin main
+git switch -c ft/footer
+git add .
+git commit -m "feat: add footer"
+git add .
+git commit -m "feat: update footer"
+git push -u origin ft/footer
+git switch main
+git pull origin main
+git switch -c ft/squashing
+git merge --squash ft/footer
+git status
+git commit -m "footer changes squashing"
+git push -u origin ft/squashing
+
+//BUNDLE 5
+exercise 2
+git clone https://github.com/YOUR-USERNAME/git-cafe-exercise.git
+cd git-cafe-exercise
+git remote -v
+git switch -c ft/restaurant-text
+git status
+git diff
+git add index.html
+git commit -m "fix: update restaurant welcome text"
+git push -u origin ft/restaurant-text
+
+//BUNDLE 6
+exercise 1
